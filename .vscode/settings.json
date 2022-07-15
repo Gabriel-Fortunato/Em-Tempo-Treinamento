@@ -1,0 +1,16 @@
+{
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": true,
+    "editor.snippetSuggestions": "inline",
+    "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "razor": "html",
+    "plaintext": "jade"
+    },
+    "files.associations": {
+    "*html": "html", 
+    "*njk": "html"
+    },
+}
