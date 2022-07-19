@@ -91,6 +91,21 @@ main{
 
 /* Main Header \ Header do Main */
 
+.main-header-logo{
+    background-color: #00887E;
+    color: #00887E;
+    width: 123px;
+    margin-right: 40px;
+    border-radius: 2em;
+    padding: 0 3px;
+}
+
+.main-header-logo img{
+    width: 123px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .main-header{
     padding: 11px 0;
     font-family: 'AvenirLTP';
@@ -102,9 +117,6 @@ main{
     width: 100%;
 }
 
-.main-header-logo{
-    width: 129px;
-}
 
 /* Search Bar */
 
@@ -167,16 +179,11 @@ main{
 
 .main-news-wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr [col]);
-    grid-template-rows: repeat(3, 1fr [row]);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
 }
 
-.big-article{
-    background-image: url(/Assets/img/Article-Imgs/Water-img.webp);
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-}
- 
 /* Grid emplacements para os childs, tirando do Big*/
 
 .main-news-wrapper .small-article:nth-child(2){
@@ -204,20 +211,118 @@ main{
     grid-column: 3 / 5;
 }
 
+/* Estilização dos Títulos */
+
+h2{
+    font-family: 'AvenirLTP';
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
  /* Estilização dos articles */ 
 
- .small-article{
+.big-article{
+    background-image: url(/Assets/img/Article-Imgs/Water-img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    color: white;
+}
+
+.big-article-category{
+    color: #00B598;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
+section article{
+    font-family: 'AvenirLTP';
+    border-radius: 20px;
+}
+
+.small-article{
     background-image: url(../img/Article-Imgs/Tec-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 .medium-article{
     background-image: url(../img/Article-Imgs/Plaza-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 .medium-alt-article{
     background-image: url(../img/Article-Imgs/Xmas-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* Estilização das Divs auxiliares / extras */
+
 .weather-box{
-    background-color: orange;
+    color: #00887E;
+    border: 1px solid #DDDDDD;
+    border-radius: 20px;
+    font-family: 'AvenirLTP';
+}
+
+.weather-box h3{
+    color: #00887E;
+    margin: 1em 0 0.5em 1em;
+}
+
+.weather-box h3:not([exepcion]){
+    color: black;
+    margin: 0;
+}
+
+.weather-box-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weather-box-now{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.weather-logo i{
+    display: inline-block;
+    font-size: 40px;
+    color: #00887E;
+}
+
+.weather-now span{
+    font-size: 38px;
+    color: #00887E;
+    font-weight: bold;
+}
+
+.weather-now-minmax span, .weather-box-prevision span{
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+
+.weather-now-minmax span:last-child, .prevision-box-lower span:last-child{
+    font-weight: bold;
+}
+
+.weather-box-prevision{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.prevision-box-upper span{
+    font-size: 24px;
+    margin-left: 12px;
 }
