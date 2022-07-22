@@ -621,6 +621,10 @@ h2{
 
 /* Seção Tv e Famosos */
 
+.tv-famous-section h2, .tv-famous-section .malt-article-category{
+    color: #626262;
+}
+
 .tv-famous-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -730,4 +734,350 @@ input[type="submit"]{
 .tv-famous-grid .medium-article-alt{
     grid-row: span 2;
     grid-column: span 1;
+}
+
+.tv-famous-grid .medium-article-img{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Plaza-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 150px;
+    border-radius: 20px;;
+}
+
+.tv-famous-grid .medium-alt-img{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Plaza-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    border-radius: 20px;;
+}
+
+/* Colunistas e Newsletter */
+
+.info-newsletter-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.colunistas{
+    background-color: #EDEDED;
+    width: 50%;
+}
+
+.colunistas h2{
+    margin-left: 1em;
+}
+
+.colunistas i{
+    font-size: 31px;
+}
+
+.colunistas-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.colunistas-person{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.person-img{
+    display: block;
+    width: 108px;
+    height: 108px;
+    background-color: #FBB160;
+    border-radius: 50%;
+}
+
+.colunistas-person h3{
+    display: inline-block;
+    margin: 0;
+}
+
+.newsletter-wrapper{
+    display: flex;
+}
+
+.newsletter-right{
+    width: 20%;
+}
+
+.newsletter-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    padding: 30px;
+    padding-right:0 ;
+}
+
+.newsletter-left h2{
+    font-size: 26px;
+    color: #00887E;
+    margin: 0;
+}
+
+.newsletter-left p{
+    margin: 0;
+}
+
+.newsletter-left form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.newsletter-left .text-input input{
+    background-color: white;
+    border: none;
+    width: 340px;
+    border-radius: 100px;
+    height: 34px;
+    padding-left: 24px;
+}
+
+
+.input-with-submit{
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-left input[type="submit"]{
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    font-size: 11px;
+    background-color: #00887E;
+    margin-left: 24px;
+}
+
+/* Seção de esportes */
+
+.sport-news-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+}
+
+.sport-news-grid .medium-alt-article{
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.sport-news-grid .big-news-box{
+    grid-column: span 2;
+    grid-row: span 2 ;
+}
+
+.sport-news-grid .medium-article-alt{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.sports-news-section h2, .sports-news-section .medium-article-category, .sports-news-section .balt-article-category, .sports-news-section .medium-article-category{
+    color: #9B1B22;
+}
+
+/* Seção Eplay */
+
+.e-play-section{
+    background: transparent linear-gradient(180deg, #00B598 0%, #029C83 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.75;
+    padding: 25px;
+    font-family: 'AvenirLTP';
+}
+
+.eplay-news-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.eplay-box{
+    background-image:linear-gradient(180deg, #00000000 0%, #000000CC 100%), url(../img/Article-Imgs/pilot-img.jpg);
+    width: 220px;
+    height: 180px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.eplay-box span, .eplay-box h3{
+    color: white;
+}
+
+.eplay-box h3{
+    font-size: 16px;
+}
+
+.eplay-news-wrapper span{
+    font-size: 31px;
+    color: white;
+}
+
+/* Seção do Webstories */
+
+.webstories-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.webstories-news-logo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.webstories-logo h2{
+    color: #00B598;
+}
+
+.webstories-logo i{
+    font-size: 40px;
+    color: #00B598;
+}
+
+.webstories-main{
+    display: flex;
+    gap: 1em;
+}
+
+.webstories-img-box{
+    width: 215px;
+    height: 315px;
+    background-color: lightcoral;
+    color: white;
+    font-size: 16px;
+    font-family: 'AvenirLTP';
+    text-align: center;
+    position: relative;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+.webstories-main-carrousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    gap: 1em;
+}
+
+.webstories-main-carrousel span{
+    font-size: 31px;
+    color: #005102;
+}
+
+.webstories-img-box p{
+    position: absolute;
+    bottom: 24px;
+    right: 8px;
+    margin: 0;
+}
+
+
+.webstories-day-logo span{
+    font-family: 'AvenirLTP';
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 218px;
+}
+
+.day-edition-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 363px;
+    width: 360px;
+}
+
+.magazine-img{
+    background-color: blue;
+    height: 80%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.access-button-box{
+    height: 20%;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    background-color: #00B598;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access-button{
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    background-color: white;
+    color: #00B598;
+    font-family: 'AvenirLTP';
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0.5em 1.5em;
+    border-radius: 20px;
+
+}
+
+ /* Footer */
+
+ footer{
+   margin-top: 1em;
+   overflow: auto;
+   font-family: 'AvenirLTP';
+ }
+
+ .footer-wrapper{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .footer-logo{
+    width: 100%;
+    height: 100px;
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.footer-wrapper-flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00887E;
+    color: white;
+}
+
+.footer-wrapper-flexbox a{
+    text-decoration: none;
+    color:white;
+}
+
+.footer-copywright{
+    margin-left: 100px;
+    box-sizing: border-box
+}
+
+.footer-nav-ul{
+    display: flex;
+    gap: 55px;
+    list-style-type: none;
+    margin-right: 100px;
 }
