@@ -89,6 +89,10 @@ main{
     margin: 0 auto;
 }
 
+section{
+    margin-top: 5%;
+}
+
 /* Main Header \ Header do Main */
 
 .main-header-logo{
@@ -180,7 +184,7 @@ main{
 .main-news-wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
 }
 
@@ -201,16 +205,6 @@ main{
     grid-column: 3 / 5;
 }
 
-.main-news-wrapper .medium-alt-article{
-    grid-row: 3 / 4;
-    grid-column: 1 / 3;
-}
-
-.main-news-wrapper .weather-box{
-    grid-row: 3 / 4;
-    grid-column: 3 / 5;
-}
-
 /* Estilização dos Títulos */
 
 h2{
@@ -222,54 +216,204 @@ h2{
 
  /* Estilização dos articles */ 
 
-.big-article{
-    background-image: url(/Assets/img/Article-Imgs/Water-img.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-    color: white;
-}
-
-.big-article-category{
-    color: #00B598;
-    font-family: 'Proxima Nova';
-    font-weight: bold;
-}
-
-section article{
+ section article{
     font-family: 'AvenirLTP';
     border-radius: 20px;
 }
 
+.medium-article-category, .malt-article-category, .big-article-category{
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.big-article{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 100%), url(/Assets/img/Article-Imgs/Water-img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    grid-row: span 2;
+    grid-column: span 2;
+    color: white;
+    height: 340px;
+}
+
+.big-article-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.big-article-category{
+    display: inline-block;
+    color: #00B598;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    margin-left: 10%;
+    text-transform: uppercase;
+}
+
+.big-article h3{
+    margin: 2% 0 2% 10%;
+    font-size: 30px;
+}
+
+.article-subtitle{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+
+.big-article-wrapper p{
+    margin: 0;
+}
+
+.big-article ul{
+    padding: 0%;
+    margin-left: 10%;
+    list-style-position: inside;
+}
+
+.big-article li{
+    margin-bottom: 2%;
+}
+
 .small-article{
-    background-image: url(../img/Article-Imgs/Tec-img.jpg);
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Tec-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 }
 
-.medium-article{
-    background-image: url(../img/Article-Imgs/Plaza-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+.small-article-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.2em;
+    box-sizing: border-box;
 }
 
-.medium-alt-article{
-    background-image: url(../img/Article-Imgs/Xmas-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.small-subtitle{
+    width: 100%;
+    margin: 0 10%;
 }
 
-/* Estilização das Divs auxiliares / extras */
+.small-subtitle span, .small-subtitle p{
+    font-size: 10px;
+}
+
+.small-article h3{
+    font-size: 16px;
+    margin: 0 10% 2%;
+}
+
+.medium-article-wrapper{
+    display: flex;
+    color: black;
+    gap: 1em;
+    height: 162.5px;
+}
+
+.medium-article-img{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Plaza-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.medium-article-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 0.4em;
+}
+
+.subtitle-light{
+    color: #00B598;
+    font-size: 10px;
+    margin-top: 1em;
+}
+
+.medium-article-box h3{
+    font-size: 17px;
+    margin: 0 5%;
+}
+
+.medium-article-box p{
+    font-size: 11px;
+    margin: 0 5%;
+}
+
+.medium-alt-wrapper{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    margin: 0;
+}
+
+.medium-alt-img{
+    width: 220px;
+    height: 150px;
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Xmas-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.medium-alt-box{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.malt-article-category{
+    color: #FBB160;
+    font-size: 11px;
+    margin: 0%;
+    text-transform: uppercase;
+}
+
+.subtitle-malt{
+    color: #626262;
+    margin: 0;
+}
+
+.medium-alt-article h3{
+    font-size: 17px;
+    margin: 0;
+}
+
+.medium-alt-article p{
+    margin: 0;
+}
+
+/* Estilização das Divs auxiliares / extras / de Ajuste */
+
+.sec-news-section{
+    width: 100%;
+    margin: 2em 0;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
 
 .weather-box{
     color: #00887E;
     border: 1px solid #DDDDDD;
     border-radius: 20px;
     font-family: 'AvenirLTP';
+    width: 50%;
 }
 
 .weather-box h3{
@@ -325,4 +469,265 @@ section article{
 .prevision-box-upper span{
     font-size: 24px;
     margin-left: 12px;
+}
+
+/* Seção das notícias Mais Lidas */
+
+.more-read-section h2{
+    color: #DEDEDE;
+    font-size: 40px;
+}
+
+.more-read-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-read-news{
+    font-family: 'AvenirLTP';
+}
+
+.more-read-news .big-article-category{
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.more-read-news h3{
+    font-size: 17px;
+}
+
+.article-fineline{
+    font-size: 11px;
+}
+
+/* Amazonas / Local News Section */
+
+.local-news-section h2{
+    font-size: 40px;
+    color: #FBB160;
+}
+
+.local-news-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+}
+
+.local-news-section .medium-alt-article{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.local-news-section .big-news-box{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.local-news-section .medium-article-alt{
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.big-news-box{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/pilot-img.jpg);
+    color: white;
+}
+
+.big-news-main{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.big-news-box .article-subtitle, .big-news-box h3, .big-news-box span, .big-news-box p{
+    margin: 0 0 1% 2%;
+}
+
+.big-news-box p{
+    margin-left: 0;
+    font-size: 10px;
+}
+
+.big-news-box span{
+    font-size: 10px;
+}
+
+.big-news-box h3{
+    font-size: 30px;
+}
+
+.big-news-main .balt-article-category{
+    color: #FBB160;
+    font-size: 11px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.medium-article-alt .medium-alt-img{
+    width: auto;
+}
+
+/* Seção do Amazonas to Google */
+
+.amazonas-google-section{
+    background-color: #E8E8E8;
+    padding: 5%;
+}
+
+.amazonas-google-section h2{
+    text-align: center;
+    color: #005102;
+}
+
+.amazonas-google-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.before, .next{
+    margin: 0 2%;
+}
+
+.amazonas-google-img{
+    background-image: linear-gradient(180deg, #00000000 0%, #000000 150%), url(../img/Article-Imgs/Xmas-img.jpg);
+    height: 150px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.amazonas-google-section i{
+    font-size: 31px;
+    color: #005102;
+}
+
+.amazonas-google-box .article-subtitle{
+    color: #005102;
+}
+
+.amazonas-google-box h3{
+    font-size: 17px;
+}
+
+.amazonas-google-box p{
+    font-size: 11px;
+    color: #626262;
+}
+
+/* Seção Tv e Famosos */
+
+.tv-famous-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+.tv-famous-grid .medium-alt-article{
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.tv-famous-grid .survey-box{
+    grid-row: span 2 ;
+    grid-column: span 1 ;
+    background-color: #EDEDED;
+    border-radius: 20px;
+    height: 100%;
+    font-family: 'AvenirLTP';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.survey-box-survey{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.survey-box-survey form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+}
+
+.input-box{
+    margin-left: 1em ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-box label{
+    text-align: left;
+    font-size: 12px;
+}
+
+input[type="radio"]{
+    appearance: none;
+    width: 22px;
+    height: 16px;
+    border: 0.15em solid #00B598;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked{
+    background-color: #00B598;
+}
+
+input[type="submit"]{
+    background: none;
+    border: none;
+    padding: 0.5em 1.5em;
+    background-color: #00B598;
+    border-radius: 50px;
+    color: white;
+}
+
+.survey-box h3{
+    font-size: 16px;
+}
+
+.survey-box p{
+    font-size: 14px;
+}
+
+.survey-box:nth-child(3) p{
+    font-size: 12px;
+}
+
+.mega-sena-result{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 11px;
+    width: 80%;
+    text-align: center;
+    color: white;
+}
+
+.mega-sena-number{
+    grid-row: span 1;
+    grid-column: span 1;
+    font-size: 20px;
+    padding: 14px;
+    background-color: #00B598;
+    border-radius: 50%;
+}
+
+.tv-famous-grid .medium-article-alt{
+    grid-row: span 2;
+    grid-column: span 1;
 }
